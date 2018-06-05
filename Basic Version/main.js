@@ -1,4 +1,6 @@
-$("input[type='text']").hide();
+$(".toggle-add").click(function() {
+  $("input[type='text']").fadeToggle();
+});
 
 $("ul").on("click", "li", function() {
 	$(this).toggleClass("completed");
@@ -17,8 +19,4 @@ $("input[type='text']").keypress(function(event) {
 		$(this).val("");
 		$("ul").append("<li><span>X</i></span> " + todoText + "</li>");
 	}
-});
-
-$(".toggle-add").click(function() {
-	$("input[type='text']").fadeToggle();
 });
